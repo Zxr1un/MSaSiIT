@@ -1,0 +1,91 @@
+﻿<Window x:Class="MetricCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MetricCalculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0" Margin="10,10,10,10" Name="CodeForAnalizeLabel" Text="Код для анализа" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <TextBlock Grid.Column="1" Grid.Row="0" Margin="10,10,10,10" Name="CodeFromAnalizeLabel" Text="Токены для анализа" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+
+
+        <RichTextBox Grid.Column="0" Margin="10,10,10,10" Name="CodeInput" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" AcceptsTab="True" Grid.RowSpan="1" Grid.Row="1"/>
+        <RichTextBox Grid.Column="1" Margin="10,10,10,10" Name="TokensOutput" VerticalScrollBarVisibility="Auto" IsReadOnly="True" Grid.RowSpan="1" Grid.Row="1"/>
+        
+        <TextBlock Grid.Column="0" Grid.Row="2" Margin="10,10,10,10" Name="LoadOperators" Text="Операторы" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Margin="10,10,10,10" Name="LoadBasicWords" Text="Базовые слова" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+
+        <DataGrid Grid.Column="0"
+          Grid.Row="3"
+          Margin="10"
+          Name="OperatorsTable"
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          CanUserAddRows="False"
+          HeadersVisibility="Column">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Оператор"
+                            Binding="{Binding Name}"
+                            Width="*"/>
+                <DataGridTextColumn Header="Количество"
+                            Binding="{Binding Count}"
+                            Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid Grid.Column="1"
+          Grid.Row="3"
+          Margin="10"
+          Name="OperandsTable"
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          CanUserAddRows="False"
+          HeadersVisibility="Column">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Операнд"
+                            Binding="{Binding Name}"
+                            Width="*"/>
+                <DataGridTextColumn Header="Количество"
+                            Binding="{Binding Count}"
+                            Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Grid.Column="0" Grid.Row="4" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Name="OperatorsCountLabel1" Text="Количество уникальных операторов: 0" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="1" Name="OperatorsCountLabel2" Text="Количество операнторов: 0" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="4" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Name="OperandsCountLabel1" Text="Количество уникальных операндов: 0" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="1" Name="OperandsCountLabel2" Text="Количество операндов: 0" VerticalAlignment="Center"/>
+        </Grid>
+
+
+        <Button Grid.Column="0" Grid.Row="5" Margin="10,10,10,10" Name="CalculateButton" Content="Calculate" Click="CalculateButton_Click" VerticalAlignment="Center" Height="40"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" Margin="10,10,10,10" Name="Metrics" Text="Метрики:"/>
+    </Grid>
+</Window>
