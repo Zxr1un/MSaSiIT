@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{05F979EE-B3A7-4AEF-992A-918C3D0527D1}|MetricCalculator.csproj|solutionrelative:logic\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05F979EE-B3A7-4AEF-992A-918C3D0527D1}|MetricCalculator.csproj|d:\\zaxar_sd\\_bsuir_study\\___3 course\\msasiit\\1laba\\metriccalculator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05F979EE-B3A7-4AEF-992A-918C3D0527D1}|MetricCalculator.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{05F979EE-B3A7-4AEF-992A-918C3D0527D1}|MetricCalculator.csproj|d:\\zaxar_sd\\_bsuir_study\\___3 course\\msasiit\\1laba\\metriccalculator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{05F979EE-B3A7-4AEF-992A-918C3D0527D1}|MetricCalculator.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05F979EE-B3A7-4AEF-992A-918C3D0527D1}|MetricCalculator.csproj|d:\\zaxar_sd\\_bsuir_study\\___3 course\\msasiit\\1laba\\metriccalculator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05F979EE-B3A7-4AEF-992A-918C3D0527D1}|MetricCalculator.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -52,25 +52,26 @@
               "RelativeDocumentMoniker": "logic\\Parser.cs",
               "ToolTip": "D:\\Zaxar_sd\\_BSUIR_Study\\___3 course\\MSaSiIT\\1laba\\MetricCalculator\\logic\\Parser.cs",
               "RelativeToolTip": "logic\\Parser.cs",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAkwNkAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAPUBAAAAAAAAAAAUwB8CAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-06T10:16:37.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Zaxar_sd\\_BSUIR_Study\\___3 course\\MSaSiIT\\1laba\\MetricCalculator\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "D:\\Zaxar_sd\\_BSUIR_Study\\___3 course\\MSaSiIT\\1laba\\MetricCalculator\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-09-04T09:05:15.699Z"
+              "WhenOpened": "2026-09-04T09:05:15.699Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Zaxar_sd\\_BSUIR_Study\\___3 course\\MSaSiIT\\1laba\\MetricCalculator\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
