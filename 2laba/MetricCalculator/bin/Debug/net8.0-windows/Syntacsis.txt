@@ -1,0 +1,6 @@
++ - * / % ++ --  == != > < >= <= & | ^ ~ << >> >>> && || ! = += -= *= /= %= <<= >>= &= ^= |= ?  ( ) { } [ ] . ; : ,
+----------
+if else for while switch case default break continue return new do
+----------
+private protected public static package import void class boolean byte short int long double float char String final
+----------
