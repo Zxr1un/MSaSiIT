@@ -688,18 +688,39 @@ namespace MetricCalculator.logic
                 else if(token == "}")
                 {
                     currentDepth--;
-                    if(currentDepth < 0 && currentOperator == "case")
+                    if (currentDepth < 0 && currentOperator == "case")
                     {
-                        while(currentOperator == "case")
+                        while (currentOperator == "case")
                         {
                             currentOperator = operators.Pop();
                             currentDepth = depthStory.Pop();
                         }
                     }
-                    else if(currentDepth == 0)
+                    else if (currentDepth == 0 && (currentOperator == "ifElse" || currentOperator == "if()") && i + 1 < gilbTokens.Count && gilbTokens[i + 1] == "else")
+                    {
+                        if (i + 2 < gilbTokens.Count && gilbTokens[i + 2] == "if()")
+                        {
+                            currentDepth++;
+                            operators.Push(currentOperator);
+                            depthStory.Push(currentDepth);
+                            if (operators.Count - 1 > maxDepth) maxDepth = operators.Count - 1;
+                            currentOperator = "ifElse";
+                            currentDepth = 0;
+                            i += 2;
+                        }
+                    }
+                    else if (currentDepth == 0 && currentOperator != "ifElse")
                     {
                         currentOperator = operators.Pop();
                         currentDepth = depthStory.Pop();
+                    }
+                    else if (currentDepth == 0 && currentOperator != "ifElse")
+                    {
+                        while (currentOperator == "ifElse")
+                        {
+                            currentOperator = operators.Pop();
+                            currentDepth = depthStory.Pop();
+                        }
                     }
                 }
                 else if(currentDepth == 0 && currentOperator == "if()")
